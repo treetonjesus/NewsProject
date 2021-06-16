@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" rowHeight="295" id="6j3-oV-dAE" customClass="ArticleCell">
+            <rect key="frame" x="0.0" y="0.0" width="435" height="295"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6j3-oV-dAE" id="cLU-SQ-ct9">
+                <rect key="frame" x="0.0" y="0.0" width="435" height="295"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z92-dk-idS">
+                        <rect key="frame" x="15" y="222.5" width="405" height="18"/>
+                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juU-7X-UN7">
+                        <rect key="frame" x="15" y="250.5" width="405" height="16"/>
+                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="F6U-Z4-DWT">
+                        <rect key="frame" x="15" y="15" width="405" height="202.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="F6U-Z4-DWT" secondAttribute="height" multiplier="2:1" id="JZi-Rv-DDh"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="juU-7X-UN7" firstAttribute="trailing" secondItem="z92-dk-idS" secondAttribute="trailing" id="A8A-b6-bdW"/>
+                    <constraint firstItem="z92-dk-idS" firstAttribute="top" secondItem="F6U-Z4-DWT" secondAttribute="bottom" constant="5" id="QxV-nU-Iua"/>
+                    <constraint firstItem="z92-dk-idS" firstAttribute="top" secondItem="cLU-SQ-ct9" secondAttribute="top" priority="999" constant="15" id="V8D-0m-ng2"/>
+                    <constraint firstItem="F6U-Z4-DWT" firstAttribute="leading" secondItem="cLU-SQ-ct9" secondAttribute="leading" constant="15" id="c0O-Ce-NxD"/>
+                    <constraint firstAttribute="trailing" secondItem="F6U-Z4-DWT" secondAttribute="trailing" constant="15" id="eR8-jN-FXn"/>
+                    <constraint firstItem="z92-dk-idS" firstAttribute="leading" secondItem="cLU-SQ-ct9" secondAttribute="leading" constant="15" id="eW8-Sd-Nab"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="juU-7X-UN7" secondAttribute="bottom" constant="10" id="gTF-V4-gkd"/>
+                    <constraint firstAttribute="trailing" secondItem="z92-dk-idS" secondAttribute="trailing" constant="15" id="njV-3z-NKj"/>
+                    <constraint firstItem="juU-7X-UN7" firstAttribute="top" secondItem="z92-dk-idS" secondAttribute="bottom" constant="10" id="onD-6f-0UN"/>
+                    <constraint firstItem="F6U-Z4-DWT" firstAttribute="top" secondItem="cLU-SQ-ct9" secondAttribute="top" constant="15" id="tQr-sW-BBv"/>
+                    <constraint firstItem="juU-7X-UN7" firstAttribute="leading" secondItem="z92-dk-idS" secondAttribute="leading" id="zKr-gg-2tU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionLabel" destination="juU-7X-UN7" id="9Cv-zV-TJj"/>
+                <outlet property="lableTopTopConstraint" destination="QxV-nU-Iua" id="6Wx-Cl-2sf"/>
+                <outlet property="pictureImageView" destination="F6U-Z4-DWT" id="roZ-5O-Umu"/>
+                <outlet property="titleLabel" destination="z92-dk-idS" id="bD1-2j-ZkT"/>
+                <outlet property="titleLableTopLazyConstraint" destination="V8D-0m-ng2" id="4V0-AA-ybe"/>
+            </connections>
+            <point key="canvasLocation" x="96.376811594202906" y="102.12053571428571"/>
+        </tableViewCell>
+    </objects>
+</document>
